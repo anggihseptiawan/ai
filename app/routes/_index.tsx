@@ -26,7 +26,7 @@ export async function action({ request }: ActionFunctionArgs) {
   const response = await anthropic.messages.create(
     {
       model: "claude-3-5-sonnet-20240620",
-      max_tokens: 100,
+      max_tokens: 300,
       system: "Answer the questions clearly and concisely",
       messages: [{ role: "user", content: message as string }],
     },
